@@ -1,6 +1,6 @@
-try:
+try: # попробовать 
     import msvcrt  # Для Windows
-except ImportError:
+except ImportError: # в случае ошибки 
     import sys, tty, termios  # Для Unix-подобных систем
 
 def get_char():
@@ -24,7 +24,7 @@ def main():
     
     while True:
         char = get_char()
-        if ord(char) == 27:  # Код клавиши ESC
+        if ord(char) == 27:  
             break
         sum_of_codes += ord(char)
         print(char,":", ord(char))
